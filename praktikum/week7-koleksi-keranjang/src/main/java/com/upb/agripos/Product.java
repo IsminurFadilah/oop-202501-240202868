@@ -4,12 +4,13 @@ public class Product {
     private String code;
     private String name;
     private int price;
+    private int stock;
 
-    // Constructor dengan 3 parameter: String, String, int
-    public Product(String code, String name, int price) {
+    public Product(String code, String name, int price, int stock) {
         this.code = code;
         this.name = name;
         this.price = price;
+        this.stock = stock;
     }
 
     public String getCode() {
@@ -24,8 +25,7 @@ public class Product {
         return price;
     }
 
-    @Override
-    public String toString() {
-        return code + " - " + name + " (Rp " + price + ")";
+    public int getStock() {
+        return stock;
     }
 }
