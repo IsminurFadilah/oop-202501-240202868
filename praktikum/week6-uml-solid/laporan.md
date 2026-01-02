@@ -1,5 +1,5 @@
 # Laporan Praktikum Minggu 6 
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+Topik: [Desain Arsitektur Sistem dengan UML dan Prinsip SOLID]
 
 ## Identitas
 - Nama  : [Ismi Nur Fadilah]
