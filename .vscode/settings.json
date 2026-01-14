@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "praktikum/week9-exception-handling/src",
+        "praktikum/week1-setup-hello-pos/src/main/java/com",
+        "praktikum/week11-dao-database/src/main/java/com/upb/agripos"
+    ]
+}
