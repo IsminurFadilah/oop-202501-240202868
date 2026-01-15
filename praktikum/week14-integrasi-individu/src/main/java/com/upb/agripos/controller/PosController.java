@@ -1,46 +1,3 @@
-# Laporan Praktikum Minggu 14 
-Topik: Integrasi Individu (OOP + Database + GUI)
-
-## Identitas
-- Nama  : Ismi Nur Fadilah
-- NIM   : 240202868
-- Kelas : 3IKRB
-
----
-
-## Tujuan
-
-Mahasiswa mampu mengintegrasikan seluruh konsep yang telah dipelajari pada Bab 1–13 ke dalam satu aplikasi Java yang utuh, meliputi OOP, UML + SOLID, Collections, Exception Handling, Design Pattern, Database (DAO + JDBC), serta GUI berbasis JavaFX.
-
----
-
-## Dasar Teori
-1. **Object Oriented Programming (OOP)** memungkinkan aplikasi dibangun secara modular melalui class dan object.
-2. **SOLID dan DIP (Dependency Inversion Principle)** memisahkan tanggung jawab antar layer agar kode mudah dikembangkan.
-3. **DAO (Data Access Object)** memisahkan logika akses database dari logika bisnis.
-4. **Collections Framework** digunakan untuk menyimpan dan mengelola data secara dinamis, seperti keranjang belanja.
-5. **JavaFX** menyediakan antarmuka GUI yang terintegrasi dengan backend aplikasi Java.
-
-
----
-
-## Langkah Praktikum
-
-1. Menggabungkan kode dari Bab 1–13 ke dalam satu project **Agri-POS**.
-2. Menghubungkan aplikasi Java dengan database PostgreSQL menggunakan JDBC.
-3. Mengimplementasikan DAO dan Service sebagai perantara antara Controller dan Database.
-4. Membuat GUI JavaFX untuk pengelolaan produk dan keranjang belanja.
-5. Menerapkan exception handling untuk validasi input.
-6. Menggunakan Collections untuk menyimpan data keranjang.
-7. Menjalankan unit test JUnit untuk menguji logika non-UI.
-8. Melakukan commit dengan pesan
-
----
-
-## Kode Program
-Contoh kode utama yang dibuat, yaitu PosController.java 
-
-```java
 package com.upb.agripos.controller;
 
 import com.upb.agripos.model.CartItem;
@@ -231,7 +188,7 @@ public class PosController {
     }
 
 
-    public void checkout() {
+     public void checkout() {
         printReceipt();        // CETAK STRUK KE CONSOLE
         updateCartDisplay();   // Refresh tampilan keranjang
     }
@@ -285,34 +242,3 @@ public class PosController {
         alert.showAndWait();
     }
 }
-```
-
----
-
-## Hasil Eksekusi
-
-- Tabel Keranjang dan Checkout
-![hasil tabel keranjang](screenshots/HasilTabelKeranjang.png)
-
-- JUnit Result
-![hasil test junit](screenshots/HasilTestJUnit.png)
-
-- Cetak Struk ke Console
-![hasil cetak struk](screenshots/HasilCetakStruk.png)
----
-
-## Analisis
-(
-- Aplikasi berjalan dengan alur View → Controller → Service → DAO → Database sesuai prinsip DIP.
-- Dibandingkan minggu sebelumnya, pada minggu ini seluruh fitur tidak berdiri sendiri, tetapi saling terintegrasi dalam satu aplikasi.
-- Kendala utama adalah koneksi database dan sinkronisasi data GUI.
-- Solusi: memperbaiki konfigurasi JDBC dan memastikan TableView di-refresh setelah operasi CRUD. 
-)
----
-
-## Kesimpulan
-
-Praktikum Minggu 14 berhasil mengintegrasikan seluruh konsep dari Bab 1–13 ke dalam satu aplikasi JavaFX yang utuh. Dengan penerapan arsitektur berlapis, DAO, Collections, exception handling, design pattern, serta unit testing, aplikasi menjadi lebih terstruktur, mudah dikembangkan, dan sesuai dengan prinsip rekayasa perangkat lunak yang baik.
-
----
-
